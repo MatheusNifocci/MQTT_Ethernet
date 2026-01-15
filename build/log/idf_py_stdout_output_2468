@@ -1,0 +1,60 @@
+[1/5] cmd.exe /C "cd /D C:\Users\Matheus\workspace\MQTT_Ethernet\build\esp-idf\esptool_py && C:\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.3.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Users/Matheus/workspace/MQTT_Ethernet/build/partition_table/partition-table.bin C:/Users/Matheus/workspace/MQTT_Ethernet/build/app-template.bin"
+app-template.bin binary size 0x93c90 bytes. Smallest app partition is 0x100000 bytes. 0x6c370 bytes (42%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D C:\Users\Matheus\workspace\MQTT_Ethernet\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.3.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/Users/Matheus/workspace/MQTT_Ethernet/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6880 bytes. 0x780 bytes (7%) free.
+[2/3] cmd.exe /C "cd /D C:\Espressif\frameworks\esp-idf-v5.3.1\components\esptool_py && C:\Espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=C:/Espressif/frameworks/esp-idf-v5.3.1 -D SERIAL_TOOL=C:/Espressif/python_env/idf5.3_py3.11_env/Scripts/python.exe;;C:/Espressif/frameworks/esp-idf-v5.3.1/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=C:/Users/Matheus/workspace/MQTT_Ethernet/build -P C:/Espressif/frameworks/esp-iesptool.py --chip esp32 -p COM6 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 app-template.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.8.1
+Serial port COM6
+Connecting.....
+Chip is ESP32-D0WDQ6 (revision v1.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 30:c6:f7:91:2c:5c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x000a3fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 26752 bytes to 16358...
+Writing at 0x00001000... (100 %)
+Wrote 26752 bytes (16358 compressed) at 0x00001000 in 0.8 seconds (effective 271.9 kbit/s)...
+Hash of data verified.
+Compressed 605328 bytes to 355443...
+Writing at 0x00010000... (4 %)
+Writing at 0x0001f0f2... (9 %)
+Writing at 0x0002837b... (13 %)
+Writing at 0x0002d1e4... (18 %)
+Writing at 0x00035bce... (22 %)
+Writing at 0x0003b8eb... (27 %)
+Writing at 0x00042000... (31 %)
+Writing at 0x000477ee... (36 %)
+Writing at 0x0004d74b... (40 %)
+Writing at 0x00053129... (45 %)
+Writing at 0x0005923f... (50 %)
+Writing at 0x0005ecf9... (54 %)
+Writing at 0x00065601... (59 %)
+Writing at 0x0006b266... (63 %)
+Writing at 0x00070e78... (68 %)
+Writing at 0x00076cde... (72 %)
+Writing at 0x0007c808... (77 %)
+Writing at 0x00082448... (81 %)
+Writing at 0x00087f5b... (86 %)
+Writing at 0x0008dbf3... (90 %)
+Writing at 0x00097b77... (95 %)
+Writing at 0x0009f9b4... (100 %)
+Wrote 605328 bytes (355443 compressed) at 0x00010000 in 9.1 seconds (effective 534.1 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 502.7 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+df-v5.3.1/components/esptool_py/run_serial_tool.cmake"
